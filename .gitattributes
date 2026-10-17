@@ -1,0 +1,14 @@
+*.ts text eol=lf whitespace text=auto working-tree-encoding=UTF-8
+*.js text eol=lf text=auto working-tree-encoding=UTF-8
+*.json text eol=lf text=auto working-tree-encoding=UTF-8
+*.md text eol=lf text=auto working-tree-encoding=UTF-8
+
+package-lock.json -text
+**/package-lock.json -text
+
+dist/** -text -merge
+
+*.md whitespace=-blank-at-eol
+
+*.zip -text -merge -diff
+*.tar -text -merge -diff

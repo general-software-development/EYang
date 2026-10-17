@@ -1,0 +1,30 @@
+{
+  "name": "eyang",
+  "version": "1.0.0",
+  "description": "An open-source, lightweight extension that allows using DuckDuckGo-like bangs anywhere, with unique URLs",
+  "homepage": "https://github.com/general-software-development/EYang#readme",
+  "bugs": {
+    "url": "https://github.com/general-software-development/EYang/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/general-software-development/EYang.git"
+  },
+  "license": "AGPL-3.0-or-later",
+  "author": "bogdan-glitchm",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:prod": "node build.mjs --production",
+    "types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.5",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
