@@ -151,3 +151,5 @@ vite.config.ts.timestamp-*
 # Artifacts
 eyang.zip
 eyang.7z
+*.zip
+*.7z

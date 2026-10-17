@@ -19,7 +19,7 @@
     "build:std": "node build.mjs",
     "build:prod": "node build.mjs --production",
     "types": "tsc --noEmit",
-    "bundle": "bestzip --level 9 eyang.zip ./dist && 7z a -t7z -m0=lzma2 -md=64m -mfb=273 -mhc=on -mx=9 -ms=on eyang.7z ./dist/*"
+    "bundle": "cd dist && bestzip --level 9 ../eyang.zip * && 7z a -t7z -m0=lzma2 -md=64m -mfb=273 -mhc=on -mx=9 -ms=on ../eyang.7z *"
   },
   "devDependencies": {
     "@types/chrome": "^0.3.5",
