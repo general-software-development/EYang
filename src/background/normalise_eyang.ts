@@ -10,6 +10,7 @@ export function eyang_search(url: URL): string[] {
     if (query === undefined)
         return;
     let results = []
+    console.log(`Got query: ${query}`)
 
     function __strip_bang(q: string, bang: string) {
         q = q.startsWith(bang)
@@ -38,6 +39,14 @@ export function eyang_search(url: URL): string[] {
                 yang_found = true;
                 _final_query = __strip_bang(_final_query, `!${bang["t"]}`);
             }
+            if (bang["ts"]) {
+                for (const ts of bang["ts"]) {
+                    if (_final_query?.startsWith(`!${ts}`) || _final_query?.endsWith(`!${ts}`)) {
+                        yang_found = true;
+                        _final_query = __strip_bang(_final_query, `!${ts}`);
+                    }
+                }
+            }
         }
     }
 
@@ -61,6 +70,17 @@ export function eyang_search(url: URL): string[] {
                     String(bang["u"]).replaceAll("{{{s}}}", _final_query)
                 );
                 query = __strip_bang(query, `!${bang["t"]}`);
+            }
+            if (bang["ts"]) {
+                for (const ts of bang["ts"]) {
+                    if (query?.startsWith(`!${ts}`) || query?.endsWith(`!${ts}`)) {
+                        yang_found = true;
+                        results.push(
+                            String(bang["u"]).replaceAll("{{{s}}}", _final_query)
+                        );
+                        query = __strip_bang(query, `!${ts}`);
+                    }
+                }
             }
         }
     }

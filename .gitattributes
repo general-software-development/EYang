@@ -12,3 +12,4 @@ dist/** -text -merge
 
 *.zip -text -merge -diff
 *.tar -text -merge -diff
+*.7z -text -merge -diff

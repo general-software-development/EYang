@@ -66374,7 +66374,7 @@
   {
     "s": "Roblox Users",
     "d": "www.roblox.com",
-    "t": "rblxg",
+    "t": "rblxu",
     "ts": [
       "robloxu"
     ],
@@ -66386,6 +66386,10 @@
     "s": "Roblox Marketplace",
     "d": "www.roblox.com",
     "t": "rblx",
+    "ts": [
+      "rblxc",
+      "robloxc"
+    ],
     "u": "https://www.roblox.com/catalog?Keyword={{{s}}}",
     "c": "Entertainment",
     "sc": "Games (general)"
@@ -68216,6 +68220,7 @@
     "t": "robloxg",
     "ts": [
       "roblox",
+      "rblxg",
       "rspt"
     ],
     "u": "https://www.roblox.com/discover/?Keyword={{{s}}}",
